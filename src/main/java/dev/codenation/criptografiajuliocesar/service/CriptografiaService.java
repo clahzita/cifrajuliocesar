@@ -27,7 +27,7 @@ public class CriptografiaService {
 		decifrado.setNumero_casas(decifrado.getNumero_casas() % 26);
 
 		// Converter a messagem para sha-1
-		decifrado.setResumoCriptografico(DigestUtils.sha(messagem).toString());
+		decifrado.setResumo_criptografico(DigestUtils.shaHex(messagem).toString());
 
 		// Encriptar a messagem
 		StringBuilder cifrado = new StringBuilder();
@@ -85,9 +85,10 @@ public class CriptografiaService {
 		cifrado.setDecifrado(msgDecifrada.toString());
 
 		// Após decifrar a mensagem, convertê-la para sha-1
-		cifrado.setResumoCriptografico(DigestUtils.sha(msgCifradaStr).toString());
+		cifrado.setResumo_criptografico(DigestUtils.shaHex(msgDecifrada.toString()).toString());
 
 		return cifrado;
+				
 	}
 
 	private void validate(String mensagem, Integer numeroCasas) throws CriptografiaCesarException {

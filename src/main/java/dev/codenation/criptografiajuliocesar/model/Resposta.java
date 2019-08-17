@@ -16,7 +16,7 @@ public class Resposta {
 	
 	private String decifrado;
 	
-	private String resumoCriptografico;
+	private String resumo_criptografico;
 	
 	
 
@@ -52,18 +52,18 @@ public class Resposta {
 		this.decifrado = decifrado;
 	}
 
-	public String getResumoCriptografico() {
-		return resumoCriptografico;
+	public String getResumo_criptografico() {
+		return resumo_criptografico;
 	}
 
-	public void setResumoCriptografico(String resumoCriptografico) {
-		this.resumoCriptografico = resumoCriptografico;
+	public void setResumo_criptografico(String resumo_criptografico) {
+		this.resumo_criptografico = resumo_criptografico;
 	}
 
 	@Override
 	public String toString() {
 		return "Resposta [numero_casas=" + numero_casas + ", token=" + token + ", cifrado=" + cifrado + ", decifrado="
-				+ decifrado + ", resumoCriptografico=" + resumoCriptografico + "]";
+				+ decifrado + ", resumoCriptografico=" + resumo_criptografico + "]";
 	}
 
 	

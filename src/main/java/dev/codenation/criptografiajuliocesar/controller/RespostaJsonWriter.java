@@ -9,19 +9,23 @@ import dev.codenation.criptografiajuliocesar.model.Resposta;
 
 public class RespostaJsonWriter {
 	
-	private String converterRepostaParaJSON(Resposta student)
+	
+	private String converterRepostaParaJSON(Resposta resposta)
 	{
 	    String respostaJson = "";
 	    try
 	    {
 	        ObjectMapper mapper = new ObjectMapper();
-	        respostaJson = mapper.writeValueAsString(student);
+	        respostaJson = mapper.writeValueAsString(resposta);
 	    }
 	    catch(Exception ex)
 	    {
 	        System.out.println("Erro ao converter objeto Resposta para Json");
 	        ex.printStackTrace();
 	    }
+	    
+	    System.out.println(respostaJson);
+	    
 	    return respostaJson;
 	}
 	
@@ -37,6 +41,7 @@ public class RespostaJsonWriter {
 	        catch(IOException e){
 	            e.printStackTrace();
 			}
+		converterRepostaParaJSON(resposta);
 	}
 	
 	

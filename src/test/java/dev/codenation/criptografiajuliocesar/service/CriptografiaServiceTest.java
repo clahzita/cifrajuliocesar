@@ -42,7 +42,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgCifrada = service.encriptar(msgRecebida);
 			assertEquals(esperado, msgCifrada.getCifrado());
-			assertNotNull(msgCifrada.getResumoCriptografico());
+			assertNotNull(msgCifrada.getResumo_criptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -58,7 +58,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgCifrada = service.encriptar(msgRecebida);
 			assertEquals(esperado, msgCifrada.getCifrado());
-			assertNotNull(msgCifrada.getResumoCriptografico());
+			assertNotNull(msgCifrada.getResumo_criptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -74,7 +74,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgCifrada = service.encriptar(msgRecebida);
 			assertEquals(esperado, msgCifrada.getCifrado());
-			assertNotNull(msgCifrada.getResumoCriptografico());
+			assertNotNull(msgCifrada.getResumo_criptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -90,7 +90,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgDecifrada = service.decriptar(msgRecebida);
 			assertEquals(esperado, msgDecifrada.getDecifrado());
-			assertNotNull(msgDecifrada.getResumoCriptografico());
+			assertNotNull(msgDecifrada.getResumo_criptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -107,7 +107,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgDecifrada = service.decriptar(msgRecebida);
 			assertEquals(esperado, msgDecifrada.getDecifrado());
-			assertNotNull(msgDecifrada.getResumoCriptografico());
+			assertNotNull(msgDecifrada.getResumo_criptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -124,7 +124,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgDecifrada = service.decriptar(msgRecebida);
 			assertEquals(esperado, msgDecifrada.getDecifrado());
-			assertNotNull(msgDecifrada.getResumoCriptografico());
+			assertNotNull(msgDecifrada.getResumo_criptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
