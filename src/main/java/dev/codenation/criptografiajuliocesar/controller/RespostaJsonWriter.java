@@ -29,18 +29,18 @@ public class RespostaJsonWriter {
 	    return respostaJson;
 	}
 	
-	public void escreverNoArquivo(Resposta resposta) {
+	public void escreverNoArquivo(Resposta resposta) throws IOException{
 		 	FileWriter escritorArquivo = null;
 	        	         
-	        try{
+	        //try{
 	        	escritorArquivo = new FileWriter("answer.json");
 	            escritorArquivo.write(converterRepostaParaJSON(resposta));
 	        	escritorArquivo.close();
 
-	        }
-	        catch(IOException e){
-	            e.printStackTrace();
-			}
+	        //}
+	        //catch(IOException e){
+	        //    e.printStackTrace();
+			//}
 		converterRepostaParaJSON(resposta);
 	}
 	

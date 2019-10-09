@@ -19,6 +19,8 @@ import dev.codenation.criptografiajuliocesar.model.Resposta;
 import dev.codenation.criptografiajuliocesar.service.CriptografiaCesarException;
 import dev.codenation.criptografiajuliocesar.service.CriptografiaService;
 
+import java.io.IOException;
+
 @RestController
 public class CriptografiaController {
 
@@ -36,7 +38,7 @@ public class CriptografiaController {
 	 * @throws CriptografiaCesarException
 	 */
 	@GetMapping("/receber")
-	public Resposta getMensagemAndSaveToFile() throws CriptografiaCesarException {
+	public Resposta getMensagemAndSaveToFile() throws CriptografiaCesarException, IOException {
 
 		RestTemplate restTemplate = new RestTemplate();
 		Resposta recebido = restTemplate.getForObject(URL_GET, Resposta.class);
