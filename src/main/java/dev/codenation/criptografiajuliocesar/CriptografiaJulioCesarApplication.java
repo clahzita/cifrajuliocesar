@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CriptografiaJulioCesarApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CriptografiaJulioCesarApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CriptografiaJulioCesarApplication.class, args);
+    }
 
 }

@@ -13,7 +13,7 @@
 	<artifactId>criptografia-julio-cesar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>criptografia-julio-cesar</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Criptografia do Julio Cesar</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -40,10 +40,12 @@
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.13</version>
 		</dependency>
-
-
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -52,5 +54,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
