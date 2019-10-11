@@ -24,10 +24,10 @@ public class CriptografiaServiceTest {
 		msgEncriptada1 = new Resposta();
 		msgEncriptada1.setCifrado(
 				"oxldb xw fqh rwbcnjm xo fqjc rw hxda lxmn fruu vjtn hxd j knccna mnenuxyna sxamr kxpprjwx");
-		msgEncriptada1.setNumero_casas(9);
+		msgEncriptada1.setNumeroCasas(9);
 
 		msgRecebida = new Resposta();
-		msgRecebida.setNumero_casas(3);
+		msgRecebida.setNumeroCasas(3);
 
 		service = new CriptografiaService();
 	}
@@ -42,7 +42,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgCifrada = service.encriptar(msgRecebida);
 			assertEquals(esperado, msgCifrada.getCifrado());
-			assertNotNull(msgCifrada.getResumo_criptografico());
+			assertNotNull(msgCifrada.getResumoCriptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -58,7 +58,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgCifrada = service.encriptar(msgRecebida);
 			assertEquals(esperado, msgCifrada.getCifrado());
-			assertNotNull(msgCifrada.getResumo_criptografico());
+			assertNotNull(msgCifrada.getResumoCriptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -74,7 +74,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgCifrada = service.encriptar(msgRecebida);
 			assertEquals(esperado, msgCifrada.getCifrado());
-			assertNotNull(msgCifrada.getResumo_criptografico());
+			assertNotNull(msgCifrada.getResumoCriptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -90,7 +90,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgDecifrada = service.decriptar(msgRecebida);
 			assertEquals(esperado, msgDecifrada.getDecifrado());
-			assertNotNull(msgDecifrada.getResumo_criptografico());
+			assertNotNull(msgDecifrada.getResumoCriptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -107,7 +107,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgDecifrada = service.decriptar(msgRecebida);
 			assertEquals(esperado, msgDecifrada.getDecifrado());
-			assertNotNull(msgDecifrada.getResumo_criptografico());
+			assertNotNull(msgDecifrada.getResumoCriptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -124,7 +124,7 @@ public class CriptografiaServiceTest {
 		try {
 			msgDecifrada = service.decriptar(msgRecebida);
 			assertEquals(esperado, msgDecifrada.getDecifrado());
-			assertNotNull(msgDecifrada.getResumo_criptografico());
+			assertNotNull(msgDecifrada.getResumoCriptografico());
 		} catch (CriptografiaCesarException e) {
 			fail();
 		}
@@ -134,7 +134,7 @@ public class CriptografiaServiceTest {
 	@Test
 	public void DecriptografarComNumeroCasaNegativoTest() {
 		msgRecebida.setCifrado("d oljhlud udsrvd pduurp vdowrx vreuh r fdfkruur fdqvdgr");
-		msgRecebida.setNumero_casas(-1);
+		msgRecebida.setNumeroCasas(-1);
 
 		Resposta msgDecifrada;
 
@@ -180,7 +180,7 @@ public class CriptografiaServiceTest {
 	@Test
 	public void DecriptografarComMensagemENumeroCasaInválidosVaziaTest() {
 		msgRecebida.setCifrado("");
-		msgRecebida.setNumero_casas(-1);
+		msgRecebida.setNumeroCasas(-1);
 
 		try {
 			msgDecifrada = service.decriptar(msgRecebida);
